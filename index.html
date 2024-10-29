@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fade In and Spotify Embed</title>
+    <style>
+      /* Set the background image */
+      body {
+        background-image: url("https://cdn.glitch.global/76b41b94-4e8b-48b6-bf47-0608e59f8cb8/455ed255-3692-436c-b14b-5fd177e5fd68.image.jpeg?v=1681922048658"); /* Replace with your image URL */
+        background-size: cover; /* Ensure the image covers the entire background */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        margin: 0; /* Remove default margin */
+        height: 100vh; /* Set the body height to full viewport height */
+        display: flex; /* Use flexbox for centering elements */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center horizontally */
+        justify-content: flex-start; /* Align children to the top */
+      }
+
+      /* Welcome Text Styles */
+      #welcome {
+        color: #ff4c4c; /* Red shade */
+        opacity: 0; /* Start hidden */
+        font-size: 120px;
+        animation: welcomeFade 3s ease-out forwards; /* Fade in/out animation */
+        margin-top: 20px; /* Margin above the welcome text */
+        background-color: #f9f9f9; /* Off-white background */
+        padding: 10px 20px; /* Padding for filled effect */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+      }
+
+      /* Fade-in-out animation for welcome text */
+      @keyframes welcomeFade {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      /* Spotify Playlist Styles */
+      #spotify {
+        opacity: 0; /* Start hidden */
+        animation: fadeIn 1.5s forwards 1.7s; /* Fade in after welcome */
+        width: 100%; /* Full width */
+        height: 352px; /* Height set to 365 pixels */
+        border: none; /* Remove the border */
+      }
+
+      /* Fade-in animation for Spotify */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Made by BlazzingRose Tag Styles */
+      #madeBy {
+        opacity: 0; /* Start hidden */
+        font-size: 24px; /* Font size */
+        text-align: center; /* Centered text */
+        margin-top: 10px; /* Margin above the tag */
+        animation: fadeInTag 1.5s forwards 1.7s; /* Fade in after Spotify */
+        color: #ff4c4c; /* Red shade (same as welcome) */
+        background-color: #f9f9f9; /* Off-white background */
+        padding: 10px 20px; /* Padding for filled effect */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+      }
+
+      /* Fade-in animation for Made by BlazzingRose tag */
+      @keyframes fadeInTag {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Spotify Playlist Banner -->
+    <iframe
+      id="spotify"
+      src="https://open.spotify.com/embed/playlist/3sQo8hugPbLYxoXUSPI7A3?utm_source=generator"
+      loading="lazy"
+    >
+    </iframe>
+
+    <!-- Welcome Text -->
+    <div id="welcome">Welcome</div>
+
+    <!-- Made by BlazzingRose Tag -->
+    <div id="madeBy">Made by BlazzingRose</div>
+  </body>
+</html>
